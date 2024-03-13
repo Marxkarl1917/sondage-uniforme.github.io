@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Redirection Aléatoire</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      text-align: center;
+      margin: 0;
+      padding: 0;
+    }
+
+    .container {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+
+    h1 {
+      margin-bottom: 20px;
+    }
+
+    .btn {
+      display: inline-block;
+      padding: 15px 30px;
+      background-color: #007bff;
+      color: #fff;
+      text-decoration: none;
+      border-radius: 5px;
+      transition: background-color 0.3s ease;
+    }
+
+    .btn:hover {
+      background-color: #0056b3;
+    }
+
+    /* Responsive styles for mobile */
+    @media screen and (max-width: 480px) {
+      .btn {
+        padding: 12px 24px;
+        font-size: 14px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <h1>Sondage sur l'uniforme à l'école</h1>
+    <button class="btn" onclick="redirectionAleatoire()">Cliquez ici pour accéder au sondage</button>
+  </div>
+
+  <script>
+    function redirectionAleatoire() {
+      var sites = [
+        "https://forms.gle/Detj5zzfJucq412m6",
+        "https://forms.gle/yskRYJRRq5d17Pyh7"
+      ];
+
+      var siteAleatoire = sites[Math.floor(Math.random() * sites.length)];
+
+      window.location.href = siteAleatoire;
+    }
+  </script
